@@ -46,8 +46,8 @@ default
         vector detectedPos = llDetectedPos(0);
         vector myPos = llGetPos();
         float distance = llVecMag( detectedPos - myPos );    
-        if( distance < 20.0 ){beHappy();} 
-        else if( distance < 10.0 ){beHappier();} 
+        if( distance < 20.0 && distance > 10.0){beHappy();} 
+        else if( distance < 10.0 && distance > 3.0){beHappier();} 
         else if( distance < 3.0 ){ beHappiest();}
     }
 
